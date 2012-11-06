@@ -1,0 +1,52 @@
+#!/usr/bin/env python
+
+from gevent import monkey; monkey.patch_all()
+
+import argparse
+import logging
+
+from job_runner_ws_server.runner import run
+
+
+parser = argparse.ArgumentParser(description='Job-Runner WebSocket Server')
+
+parser.add_argument(
+    '--events-port',
+    dest='events_port',
+    type=int,
+    default=5555,
+    help='The port to receive (worker) events on (default: 5555)',
+)
+
+parser.add_argument(
+    '--ws-port',
+    dest='ws_port',
+    type=int,
+    default=5000,
+    help='The port for the WebSocket server (default: 5000)',
+)
+
+parser.add_argument(
+    '--log-level',
+    dest='log_level',
+    type=str,
+    default='info',
+    choices=[
+        'debug',
+        'info',
+        'warning',
+        'error',
+    ],
+    help='The log-level for logging (default: info)',
+)
+
+
+if __name__ == '__main__':
+    arguments = parser.parse_args()
+
+    logging.basicConfig(
+        level=getattr(logging, arguments.log_level.upper()),
+        format='%(levelname)s - %(asctime)s - %(name)s: %(message)s',
+    )
+
+    run(arguments.events_port, arguments.ws_port)

@@ -1,0 +1,8 @@
+# Documentation
+# sphinx
+
+# Testing
+coverage
+pep8
+unittest2
+websocket-client
