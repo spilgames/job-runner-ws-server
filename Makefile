@@ -2,9 +2,6 @@ clean-pyc:
 	find . -type f -name "*.pyc" -delete
 	find . -type f -name "*.pyo" -delete
 
-documentation:
-	cd docs && SETTINGS_PATH='.' make clean html
-
 pep8:
 	pep8 --show-pep8 -r job_runner_ws_server && echo "All good!"
 

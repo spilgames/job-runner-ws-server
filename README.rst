@@ -10,6 +10,17 @@ WebSocket server.
 Installation
 ------------
 
+Requirements
+~~~~~~~~~~~~
+
+The following packages (on RedHat) are required:
+
+   * ``python-devel``
+   * ``python-virtualenv``
+   * ``gcc``
+   * ``gcc-c++``
+   * ``libevent-devel``
+
 This package can be installed by executing ``pip install job-runner-ws-server``.
 
 
