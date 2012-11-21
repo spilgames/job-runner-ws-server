@@ -3,25 +3,31 @@ Job-Runner WebSocket Server
 
 The WebSocket Server for the Job-Runner is a broadcaster for incoming events
 published by the Job-Runner Workers. It's purpose is to collect events from
-all available Job-Runner Workers and distribute these events through a
-WebSocket server.
+all available Job-Runner Workers and distribute these events to all the
+connected WebSocket clients.
 
 
 Installation
 ------------
 
-Requirements
-~~~~~~~~~~~~
+Deployar
+~~~~~~~~
 
-The following packages (on RedHat) are required:
+This package is as ``job-runner-ws-server`` available in Deployar.
+
+
+From source
+~~~~~~~~~~~
+
+If you are running the code from source, make sure you have the following
+requirements installed:
 
    * ``python-devel``
-   * ``python-virtualenv``
    * ``gcc``
    * ``gcc-c++``
    * ``libevent-devel``
 
-This package can be installed by executing ``pip install job-runner-ws-server``.
+Then install the Python requirements with ``pip install -r requirements.txt``.
 
 
 Usage
@@ -46,6 +52,12 @@ The usage of the ``job_runner_ws_server`` executable is::
 
 Changes
 -------
+
+v1.0.0
+~~~~~~
+
+* Deployar related changes.
+
 
 v0.5.0
 ~~~~~~
