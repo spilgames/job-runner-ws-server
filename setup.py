@@ -6,7 +6,7 @@ import job_runner_ws_server
 setup(
     name='job-runner-ws-server',
     version=job_runner_ws_server.__version__,
-    url='https://github.com/spilgames/dwh/',
+    url='https://github.com/spilgames/job_runner_ws_server/',
     author='Orne Brocaar',
     author_email='orne.brocaar@spilgames.com',
     description='Job-Runner WebSocket Server',
