@@ -10,24 +10,16 @@ connected WebSocket clients.
 Installation
 ------------
 
-Deployar
-~~~~~~~~
+Requirements (depending on your distro, the naming might be a bit different):
 
-This package is as ``job-runner-ws-server`` available in Deployar.
+* ``python-dev``
+* ``build-essential``
+* ``libevent-dev``
 
-
-From source
-~~~~~~~~~~~
-
-If you are running the code from source, make sure you have the following
-requirements installed:
-
-   * ``python-devel``
-   * ``gcc``
-   * ``gcc-c++``
-   * ``libevent-devel``
-
-Then install the Python requirements with ``pip install -r requirements.txt``.
+Then install this package by executing ``python setup.py install`` or
+``python setup.py develop`` (for development). In the latter, you might want
+to install the testing requirements by executing
+``pip install -r test-requirements.txt``.
 
 
 Usage
