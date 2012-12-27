@@ -21,6 +21,9 @@ Then install this package by executing ``python setup.py install`` or
 to install the testing requirements by executing
 ``pip install -r test-requirements.txt``.
 
+See the getting started section in the Job-Runner documentation (
+in the *job-runner* repo) for setting up the whole project.
+
 
 Usage
 -----
