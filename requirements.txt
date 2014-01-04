@@ -1,5 +1,5 @@
 argparse
 gevent
 gevent_subprocess
-gevent-websocket
+gevent-websocket==0.3.6
 pyzmq
